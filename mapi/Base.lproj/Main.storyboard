@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PCS-AN-iCu"/>
+                        <viewControllerLayoutGuide type="bottom" id="10d-3W-DBg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapiback.png" translatesAutoresizingMaskIntoConstraints="NO" id="1BX-2t-0bA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMk-IC-jDB">
+                                <rect key="frame" x="85" y="207" width="150" height="100"/>
+                                <state key="normal" image="new.png"/>
+                                <connections>
+                                    <segue destination="OVg-29-Y7f" kind="modal" id="jQf-sZ-sMJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrP-s6-Z5y">
+                                <rect key="frame" x="85" y="382" width="150" height="100"/>
+                                <state key="normal" image="edit4.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Qjf-HJ-3Cb" kind="modal" id="Tte-OP-ow0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-144" y="-21"/>
+        </scene>
+        <!--Newmap-->
+        <scene sceneID="ePB-WQ-c8T">
+            <objects>
+                <viewController id="OVg-29-Y7f" customClass="newmap" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nfx-OO-Ylv"/>
+                        <viewControllerLayoutGuide type="bottom" id="0pQ-bn-NNy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SpM-FD-I8N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SC2-hh-bcH">
+                                <rect key="frame" x="0.0" y="500" width="320" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6om-Hl-tG0">
+                                        <rect key="frame" x="20" y="14" width="280" height="40"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                        <state key="normal" title="SAVE">
+                                            <color key="titleColor" red="0.29803922772407532" green="0.59215688705444336" blue="0.62745100259780884" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="save:" destination="OVg-29-Y7f" eventType="touchUpInside" id="UAP-PT-vPr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is8-uo-8aZ">
+                                        <rect key="frame" x="223" y="5" width="89" height="58"/>
+                                        <color key="backgroundColor" red="1" green="0.1952384845" blue="0.090632352999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="確認">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="kakuninBtn" destination="Qjf-HJ-3Cb" eventType="touchDown" id="DbL-x5-pLl"/>
+                                            <action selector="kakuninBtn" destination="OVg-29-Y7f" eventType="touchDown" id="sfN-BW-H8u"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.72549021244049072" green="0.85882359743118286" blue="0.90980398654937744" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cw-Pz-6bo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="-21"/>
+        </scene>
+        <!--Newmap-->
+        <scene sceneID="lHq-3a-c1U">
+            <objects>
+                <viewController id="Qjf-HJ-3Cb" customClass="newmap" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Yz-Rv-c8y"/>
+                        <viewControllerLayoutGuide type="bottom" id="dnS-vW-Rpt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KUg-Yf-w9x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMm-1e-4m5">
+                                <rect key="frame" x="0.0" y="500" width="320" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCY-wj-h5f">
+                                        <rect key="frame" x="20" y="14" width="176" height="40"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                        <state key="normal" title="SAVE">
+                                            <color key="titleColor" red="0.29803922770000002" green="0.59215688710000003" blue="0.62745100259999997" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="save:" destination="Qjf-HJ-3Cb" eventType="touchUpInside" id="zli-F2-jYK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wT-0Y-PmK">
+                                        <rect key="frame" x="218" y="5" width="89" height="58"/>
+                                        <color key="backgroundColor" red="1" green="0.19523848448319547" blue="0.090632353003157862" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="確認">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="kakuninBtn" destination="Qjf-HJ-3Cb" eventType="touchDown" id="ZIE-76-jwi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7254902124" green="0.85882359740000003" blue="0.90980398650000005" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B20-EW-gGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="635"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="edit4.png" width="150" height="100"/>
+        <image name="mapiback.png" width="640" height="1136"/>
+        <image name="new.png" width="150" height="100"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
